@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Frontend Mentor - Loopstudios landing page
 
 ![Design preview for the Loopstudios landing page coding challenge](./design/desktop-preview.jpg)
@@ -92,3 +93,7 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+=======
+# Loopstudios-landing-page
+Loop Studios homepage made with grid
+>>>>>>> 27e08a5b70cfa4405edade3f58adcd5a55303b65
