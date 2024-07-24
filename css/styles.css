@@ -1,0 +1,95 @@
+:root{
+    --white: hsl(0, 0%, 100%);
+--black: hsl(0, 0%, 0%);
+--dark-Gray: hsl(0, 0%, 55%);
+--very-Dark-Gray: hsl(0, 0%, 41%);
+--font-josefin-sans: "Josefin Sans", sans-serif;
+}
+
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Alata", sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+max-width: 1200px;
+padding: 45px 0 0;
+overflow: hidden; /*Recuerda que esta propiedad hace que todo elemento que salga del contenedor se esconda*/
+}
+
+.hero{
+    min-height: 500px;
+    background-image: url(../images/mobile/image-hero.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.nav{
+--close: none;
+--hamburguer: block;
+
+    display: grid;
+    grid-template-columns: max-content max-content; /*Aquí le estoy diciendo que cree 2 columnas del máximo contenido porque solo tenemos el logo y el menú hamburguesa, y para que se sitúen por igual o de manera equitativa y se vea ordenado le colocamos así*/
+    grid-template-areas: "logo active";
+    justify-content: space-between;
+}
+
+.nav__logo{
+    z-index: 1; /*Los grid-items y los flex-items pueden usar el valor de z-index, esto es para que se posicione el logo sobre el background*/
+}
+
+.nav__hamburguer, .nav__close{
+grid-area: active;
+place-self: center;
+cursor: pointer;
+z-index: 1;
+}
+
+.nav__hamburguer{
+    display: var(--hamburguer);
+}
+
+.nav__close{
+    display: var(--close);
+}
+
+.nav__img{
+    display: block;
+}
+
+.nav__links{
+   
+    position:absolute;
+    background-color: var(--black);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;/*Esto hace que ocupemos el 100% del viewport (ventana gráfica)*/
+    min-height: 500px;
+    padding: 0;
+    display: grid;
+    place-content: center start;
+    gap: 2em;
+    padding-left: 5%;
+}
+
+.nav__list{
+ list-style: none;
+}
+
+.nav__link{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-family: var(--font-josefin-sans);
+    text-transform: uppercase;
+    font-weight: 300;
+}
