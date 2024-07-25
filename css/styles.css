@@ -17,11 +17,13 @@ body{
     font-family: "Alata", sans-serif;
 }
 
+/*header*/
 .container{
     width: 90%;
     margin: 0 auto;
 max-width: 1200px;
-padding: 45px 0 0;
+
+
 overflow: hidden; /*Recuerda que esta propiedad hace que todo elemento que salga del contenedor se esconda*/
 }
 
@@ -30,16 +32,40 @@ overflow: hidden; /*Recuerda que esta propiedad hace que todo elemento que salga
     background-image: url(../images/mobile/image-hero.jpg);
     background-position: center;
     background-size: cover;
+    
 }
+.hero__text{
+    padding: 120px 0;
+    
+}
+
+.hero__title{
+    max-width: 500px;
+    color: var(--white);
+    border: 2px solid;
+    font-family: var(--font-josefin-sans);
+    font-size: 3.5rem;
+    padding: 2.3rem;
+    font-weight: 300;
+   
+}
+
 
 .nav{
 --close: none;
 --hamburguer: block;
-
+--transform: translate(-100%); /*Esto hará que se traslade hacia la izquierda*/
     display: grid;
     grid-template-columns: max-content max-content; /*Aquí le estoy diciendo que cree 2 columnas del máximo contenido porque solo tenemos el logo y el menú hamburguesa, y para que se sitúen por igual o de manera equitativa y se vea ordenado le colocamos así*/
     grid-template-areas: "logo active";
     justify-content: space-between;
+    padding: 45px 0 0;
+}
+
+.nav:target{
+    --close: block;
+--hamburguer: none;
+--transform: translate(0); 
 }
 
 .nav__logo{
@@ -79,6 +105,9 @@ z-index: 1;
     place-content: center start;
     gap: 2em;
     padding-left: 5%;
+
+    transform: var(--transform);
+    transition: transform .4s ;
 }
 
 .nav__list{
@@ -92,4 +121,36 @@ z-index: 1;
     font-family: var(--font-josefin-sans);
     text-transform: uppercase;
     font-weight: 300;
+}
+
+
+/*seccion de leader*/
+
+.leader{
+    display: grid;
+    gap: 2.5em;
+}
+
+.leader__img{
+    width: 100%;
+
+}
+
+.leader__texts{
+    text-align: center;
+    
+}
+
+.subtitle{
+    font-family: var(--font-josefin-sans);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+    font-weight: 300;
+}
+
+.leader__paragraph{
+color: var(--dark-Gray);
+line-height: 1.5;
+margin: 1.5em;
 }
